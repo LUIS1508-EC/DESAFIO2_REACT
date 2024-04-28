@@ -1,9 +1,9 @@
-const Parrafo = () => {
-    return (
-        <p>
-            Puedes usar tu email para registrarte
-        </p>
-    )
-}
 
+function Parrafo(){
+return(
+<p>
+También puedes utilizar tu correo para registrarte...
+</p>
+)
+}
 export default Parrafo

@@ -1,15 +1,13 @@
-/* eslint-disable react/prop-types */
-
 import Formulario from "./Formulario";
-import Alertas from "./Alertas";
-import Container from "react-bootstrap/Container";
+import Alert from "./Alertas";
 import Parrafo from "./Parrafo";
+import Container from "react-bootstrap/esm/Container";
 
-const Registro = (props) => {
-  const iconosImagenes = [
+function Registro(){
+  const iconosImg = [
     {
-      id: 1,
-      value: "fa-brands fa-facebook",
+    id: 1,
+    value: "fa-brands fa-facebook",
     },
     {
       id: 2,
@@ -19,17 +17,17 @@ const Registro = (props) => {
       id: 3,
       value: "fa-brands fa-linkedin-in",
     },
-  ];
-  return (
-    <>
-      <Container className="pt-5 pl-2 pr-2 mb-5 pb-5 bg-light text-center rounded-5">
-        <h1>Registrate</h1>
-        <div className="pb-0" id="iconos">
-          {iconosImagenes.map(({ id, value }) => (
+];
+}
+return(
+<>
+<Container>
+        <h1>Crea una cuenta</h1>
+        <div>
+          {iconosImg.map(({ id, value }) => (
             <SocialButton key={id} icono={value} />
           ))}
         </div>
-        <Texto />
         <Formulario setAlerta={props.setAlerta} alerta={props.alerta} />
         {props.alerta.msg ? (
           <Alert
@@ -39,8 +37,9 @@ const Registro = (props) => {
           />
         ) : null}
       </Container>
-    </>
-  );
-};
+</>
 
-export default Registro;
+
+)
+
+export default Registro
