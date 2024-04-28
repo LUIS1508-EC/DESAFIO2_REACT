@@ -2,6 +2,7 @@ import Formulario from "./Formulario";
 import Alert from "./Alertas";
 import Parrafo from "./Parrafo";
 import Container from "react-bootstrap/esm/Container";
+import Boton from "./Boton";
 
 function Registro(){
   const iconosImg = [
@@ -18,14 +19,13 @@ function Registro(){
       value: "fa-brands fa-linkedin-in",
     },
 ];
-}
 return(
 <>
 <Container>
         <h1>Crea una cuenta</h1>
         <div>
           {iconosImg.map(({ id, value }) => (
-            <SocialButton key={id} icono={value} />
+            <Boton key={id} icono={value} />
           ))}
         </div>
         <Formulario setAlerta={props.setAlerta} alerta={props.alerta} />
@@ -40,6 +40,6 @@ return(
 </>
 
 
-)
-
+);
+};
 export default Registro
