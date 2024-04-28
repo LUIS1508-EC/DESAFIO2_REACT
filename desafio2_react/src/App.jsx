@@ -4,13 +4,10 @@ import Registro from './components/Registro';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const App = () => {
-  const [alerta, setAlerta] = useState({ error: false, msg: "", color: "" });
-
   return (
-    <div className="container">
-      <Registro setAlerta={setAlerta} alerta={alerta} />
-    </div>
+<>
+
+</>
   );
 };
 

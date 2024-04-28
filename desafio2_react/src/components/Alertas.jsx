@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
-import Alert from "react-bootstrap/Alert";
-const Alertas = (props) => {
-  return (
-    <Alert  key={props.variant} variant={props.variant}>
-      {props.mensaje}
-    </Alert>
-  );
-};
+import Alerta from "react-bootstrap/Container";
 
-export default Alertas;
+
+function Alert(props){
+return(
+<Alerta key={props.change} change={props.change}>
+{props.mensaje}
+
+</Alerta>
+
+)
+
+}
+export default Alert
