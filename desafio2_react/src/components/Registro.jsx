@@ -5,7 +5,7 @@ import Formulario from "./Formulario";
 import Alert from "./Alertas";
 import "./Registro.css";
 import Container from "react-bootstrap/Container";
-import Parrafo from "./Parrafo";
+
 
 const Registro = (props) => {
   const iconosImg = [
