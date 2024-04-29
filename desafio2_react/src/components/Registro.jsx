@@ -32,11 +32,11 @@ const Registro = (props) => {
           ))}
         </div>
         <Formulario setAlerta={props.setAlerta} alerta={props.alerta} />
-        {props.alerta.mensaje ? (
+        {props.alerta.mensajes ? (
           <Alert
             className="rounded-3"
             variant={props.alerta.color}
-            mensaje={props.alerta.mensaje}
+            mensaje={props.alerta.mensajes}
           />
         ) : null}
       </Container>

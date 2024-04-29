@@ -1,7 +1,7 @@
 function Boton(props){
 
     return(
-        <img className={props.iconos}></img>
+        <i className={props.iconos}></i>
     )
 }
 

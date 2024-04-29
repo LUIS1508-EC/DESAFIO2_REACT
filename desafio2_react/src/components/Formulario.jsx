@@ -1,27 +1,28 @@
 import { useState } from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import "./formulario.css";
 
 function Formulario(props) {
     const [nombre, setNombre] = useState("")
     const [correo, setCorreo] = useState("")
     const [clave, setClave] = useState("")
-    const [clave2, setClave2] = useState("")
+    const [confirmaClave, setConfirmaClave] = useState("")
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        if (nombre === "" || correo === "" || clave === "" || clave2 === "") {
+        if (nombre === "" || correo === "" || clave === "" || confirmaClave === "") {
             props.setAlerta({
                 error: true,
-                mensaje: "Debes completar todos los campos",
+                mensajes: "Debes completar todos los campos",
                 color: "danger",
             });
 
-    } else if (clave != clave2) {
+    } else if (clave != confirmaClave) {
         props.setAlerta({
             error: true,
-            mensaje: "Las Claves deben coincidir",
+            mensajes: "Las Claves deben coincidir",
             color: "danger",
         });
 
@@ -29,22 +30,22 @@ function Formulario(props) {
 
         props.setAlerta({
             error: true,
-            mensaje: "Registro Correcto",
+            mensajes: "Registro Correcto",
             color: "success"
         });
         setNombre("");
         setCorreo("");
         setClave("");
-        setClave2("");
+        setConfirmaClave("");
 
     }
 }
 return(
 <>
 
-<Form onSubmit={handleSubmit}>
+<Form className="formu" onSubmit={handleSubmit}>
 
-                <Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control
                         placeholder="Nombre"
                         type="text"
@@ -60,7 +61,7 @@ return(
                         onChange={(e) => setCorreo(e.target.value)}
                     />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control
                         placeholder="Contraseña"
                         type="password"
@@ -68,15 +69,15 @@ return(
                         onChange={(e) => setClave(e.target.value)}
                     />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control
                         placeholder="Confirma tu contraseña"
                         type="password"
-                        value={clave2}
-                        onChange={(e) => setClave2(e.target.value)}
+                        value={confirmaClave}
+                        onChange={(e) => setConfirmaClave(e.target.value)}
                     />
                 </Form.Group>
-                <Button>
+                <Button className="w-100" variant="success" type="submit">
                     Registrarse
                 </Button>
             </Form>
