@@ -1,11 +1,11 @@
-#iconos {
+#seccionIconos {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
-#iconos i {
+#seccionIconos img {
     color: black;
     font-size: 30px;
     border-radius: 50px;

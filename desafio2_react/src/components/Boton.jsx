@@ -1,4 +1,4 @@
-function Boton(){
+function Boton(props){
 
     return(
         <img className={props.iconos}></img>

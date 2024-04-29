@@ -8,7 +8,7 @@ function Formulario(props) {
     const [clave, setClave] = useState("")
     const [clave2, setClave2] = useState("")
 
-    const aviso = (e) => {
+    const handleSubmit = (e) => {
 
         e.preventDefault();
         if (nombre === "" || correo === "" || clave === "" || clave2 === "") {
@@ -56,24 +56,24 @@ return(
                     <Form.Control
                         placeholder="registro@ejemplo.com"
                         type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={correo}
+                        onChange={(e) => setCorreo(e.target.value)}
                     />
                 </Form.Group>
                 <Form.Group>
                     <Form.Control
                         placeholder="Contraseña"
                         type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        value={clave}
+                        onChange={(e) => setClave(e.target.value)}
                     />
                 </Form.Group>
                 <Form.Group>
                     <Form.Control
                         placeholder="Confirma tu contraseña"
                         type="password"
-                        value={pass}
-                        onChange={(e) => setPass(e.target.value)}
+                        value={clave2}
+                        onChange={(e) => setClave2(e.target.value)}
                     />
                 </Form.Group>
                 <Button>

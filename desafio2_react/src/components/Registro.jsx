@@ -1,14 +1,17 @@
+/* eslint-disable react/prop-types */
+
+import Boton from "./Boton";
 import Formulario from "./Formulario";
 import Alert from "./Alertas";
+import "./Registro.css";
+import Container from "react-bootstrap/Container";
 import Parrafo from "./Parrafo";
-import Container from "react-bootstrap/esm/Container";
-import Boton from "./Boton";
 
-function Registro(){
+const Registro = (props) => {
   const iconosImg = [
     {
-    id: 1,
-    value: "fa-brands fa-facebook",
+      id: 1,
+      value: "fa-brands fa-facebook",
     },
     {
       id: 2,
@@ -18,28 +21,27 @@ function Registro(){
       id: 3,
       value: "fa-brands fa-linkedin-in",
     },
-];
-return(
-<>
-<Container>
-        <h1>Crea una cuenta</h1>
-        <div>
+  ];
+  return (
+    <>
+      <Container className="pt-5 pl-2 pr-2 mb-5 pb-5 bg-light text-center rounded-5">
+        <h1>REGISTRATE</h1>
+        <div className="pb-0" id="seccionIconos">
           {iconosImg.map(({ id, value }) => (
-            <Boton key={id} icono={value} />
+            <Boton key={id} iconos={value} />
           ))}
         </div>
         <Formulario setAlerta={props.setAlerta} alerta={props.alerta} />
-        {props.alerta.msg ? (
+        {props.alerta.mensaje ? (
           <Alert
             className="rounded-3"
             variant={props.alerta.color}
-            mensaje={props.alerta.msg}
+            mensaje={props.alerta.mensaje}
           />
         ) : null}
       </Container>
-</>
-
-
-);
+    </>
+  );
 };
-export default Registro
+
+export default Registro;
