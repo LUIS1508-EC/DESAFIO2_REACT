@@ -77,7 +77,7 @@ return(
                         onChange={(e) => setConfirmaClave(e.target.value)}
                     />
                 </Form.Group>
-                <Button className="w-100" variant="success" type="submit">
+                <Button className="w-100" variant="primary" type="submit">
                     Registrarse
                 </Button>
             </Form>

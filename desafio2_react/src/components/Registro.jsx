@@ -24,7 +24,7 @@ const Registro = (props) => {
   ];
   return (
     <>
-      <Container className="pt-5 pl-2 pr-2 mb-5 pb-5 bg-light text-center rounded-5">
+      <Container className="pt-5 pl-2 pr-2 mb-5 pb-5 bg-success text-center rounded-5">
         <h1>REGISTRATE</h1>
         <div className="pb-0" id="seccionIconos">
           {iconosImg.map(({ id, value }) => (

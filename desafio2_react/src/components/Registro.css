@@ -1,3 +1,5 @@
+
+
 #seccionIconos {
     display: flex;
     gap: 20px;
@@ -6,9 +8,13 @@
 }
 
 #seccionIconos i {
-    color: black;
+    color: white;
     font-size: 30px;
     border-radius: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 10px;
+}
+
+.container h1{
+color: white;    
 }
